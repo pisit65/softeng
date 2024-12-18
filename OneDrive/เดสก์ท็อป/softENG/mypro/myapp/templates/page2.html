@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>หน้าถัดไป</title>
+  <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+
+</head>
+<body>
+  <header>
+    <h1>นี่คือหน้าถัดไป</h1>
+  </header>
+  <main>
+    <p>ขอบคุณที่เข้าชมหน้าเว็บของเรา!</p>
+    <a href="{% url 'index' %}" class="button">กลับไปหน้าแรก</a>
+  </main>
+</body>
+</html>
