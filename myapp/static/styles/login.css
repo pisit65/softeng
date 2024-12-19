@@ -1,0 +1,101 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ส่วนหัว */
+header {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ฟอร์มเข้าสู่ระบบ */
+.login-form {
+    background-color: white;
+    padding: 20px 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #45a049;
+}
+
+.login-form .register-link {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.login-form .register-link:hover {
+    text-decoration: underline;
+}
+
+/* ส่วนท้าย */
+footer {
+    margin-top: auto;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ddd;
+}

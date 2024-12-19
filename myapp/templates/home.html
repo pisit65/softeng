@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบยืมคืน</title>
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>ระบบยืมคืน</h1>
+            <form action="{% url 'logout' %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="logout-button">Logout</button>
+            </form>          
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2>ยินดีต้อนรับ, {{ user.username }}</h2>
+            <p>คุณสามารถดูสถานะอุปกรณ์ที่ยืมหรือคืนได้จากที่นี่</p>
+        </section>
+        <section class="device-list">
+            <h2>รายการอุปกรณ์</h2>
+            <ul>
+                {% for device in devices %}
+                <li class="device-item">
+                    <div>
+                        <h3>{{ device.name }}</h3>
+                        <p>สถานะ: {{ device.get_status_display }}</p>
+                    </div>
+                    {% if device.is_available %}
+                    <a href="{% url 'borrow_device' device.id %}" class="button">ยืม</a>
+                    {% else %}
+                    <span class="not-available">ไม่ว่าง</span>
+                    {% endif %}
+                </li>
+                {% empty %}
+                <p>ไม่มีอุปกรณ์ในระบบ</p>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 ระบบยืมคืน</p>
+    </footer>
+</body>
+</html>

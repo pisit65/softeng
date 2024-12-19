@@ -1,0 +1,51 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ส่วนหัว */
+header {
+    background-color: #4CAF50; /* สีเขียว */
+    color: white;
+    padding: 15px 20px;
+    display: flex; /* ใช้ Flexbox */
+    align-items: center; /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* ชื่อระบบอยู่ด้านซ้าย */
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* ปุ่ม Logout ติดขอบขวา */
+header form {
+    margin: 0;
+    position: absolute; /* ใช้ตำแหน่งแบบ absolute */
+    top: 50%; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    right: 20px; /* ติดขอบขวา */
+    transform: translateY(-50%); /* ปรับให้อยู่กึ่งกลาง */
+}
+
+header .logout-button {
+    background-color: white;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+header .logout-button:hover {
+    background-color: #45a049; /* สีเขียวเข้ม */
+    color: white;
+}
